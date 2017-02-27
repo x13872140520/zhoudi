@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-type" content="text/html">
+<title>
+周帝的作品
+</title>
+<style type="text/css">
+	#box{width:190px;height:190px;background:black;color:#FFF;font-size:12px;margin:0 auto;padding:14px 12px;border:8px solid black;box-sizing:border-box;cursor:crosshair;}
+</style>
+</head>
+<body>
+<div id="box">
+鼠标移入改变样式，鼠标移出恢复。
+</div>
+</body>
+<script src="js/event.js"></script>
+<script type="text/javascript">
+window.onload=function(){
+var	box=document.getElementById("box");		
+eventUtil.addHandler(box,'mouseover',function(){
+box.style.borderColor="red";
+});
+eventUtil.addHandler(box,'mouseout',function(){
+box.style.borderColor="black";
+});
+}
+</script>
+</html>

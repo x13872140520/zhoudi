@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>周帝的作品</title>
+<style>
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	list-style-type: none;
+}
+
+em, i {
+	font-style: normal;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #066;
+}
+
+body {
+	color: #666;
+	font: 12px/22px "Simsun", "宋体";
+	overflow-x: hidden;
+}
+
+.wrapper {
+	width: 1920px;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin: 0 0 0 -960px;
+	height:600px;
+}
+
+
+.topNav {
+	width: 100%;
+	height: 47px;
+	background: url(images/navbg.png);
+	z-index: 1;
+}
+
+.topNavList {
+	width: 1000px;
+	height: 47px;
+	margin: 0 auto;
+}
+
+.topNavSub {
+	position: relative;
+}
+
+.topNav a {
+	display: block;
+	float: left;
+	height: 47px;
+	line-height: 47px;
+	color: #066;
+	font: 16px/47px "Microsoft YaHei", "Simsun", "宋体";
+	margin: 0 53px 0 13px;
+	padding: 0 7px;
+}
+.activeTopNav {
+	background: url(images/navItemBg_13.png) 0 -1px;
+}
+
+.activeLeft {
+	width: 8px;
+	height: 51px;
+	position: absolute;
+	top: -1px;
+	background: url(images/navItemBg_12.png);
+	display:none;
+}
+
+.activeRight {
+	width: 10px;
+	height: 51px;
+	position: absolute;
+	top: -1px;
+	background: url(images/navItemBg_14.png);
+	display: none;
+}
+
+
+
+.subNavWrapper {
+	width: 1000px;
+	height: 300px;
+	position: absolute;
+	left: 50%;
+	top: 44px;
+	margin: 0 0 0 -495px;
+	z-index: 1;
+	display: none;
+}
+
+.subNavSet {
+	width: 1000px;
+	height: 300px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.subNav {
+	position: relative;
+	display: none;
+}
+
+.subNav ul {
+	width: 132px;
+	height: 234px;
+	position: absolute;
+	left: 23px;
+	top: 16px;
+	color: #333;
+	font: 14px/30px "Simsun", "宋体";
+}
+
+.subNav ul a {
+	width: 130px;
+	display: block;
+	padding: 0 0 0 16px;
+	float: left;
+	color: #333;
+	font: 14px/34px "Microsoft YaHei", "Simsun", "宋体";
+	background: url(images/arrowSub.png) left center no-repeat;
+}
+
+.subNav ul a:hover {
+	color: #066;
+	text-decoration: underline;
+}
+
+.sub1 {
+	left: 144px;
+}
+
+.sub2 {
+	left: 168px;
+}
+
+.sub3 {
+	left: 262px;
+}
+
+.sub4 {
+	left: 157px;
+}
+
+.sub5 {
+	left: 263px;
+}
+
+.sub0 .subBgTopLeft, .sub1 .subBgTopLeft {
+	width: 706px;
+	height: 7px;
+	display: block;
+	background: url(images/subTop0.png);
+}
+
+.sub3 .subBgTopLeft {
+	width: 706px;
+	height: 7px;
+	display: block;
+	background: url(images/subTop3.png);
+}
+
+
+.sub5 .subBgTopLeft {
+	width: 706px;
+	height: 7px;
+	display: block;
+	background: url(images/subTop5.png);
+}
+
+.sub0 .subBgBotLeft, .sub1 .subBgBotLeft, .sub3 .subBgBotLeft, .sub5 .subBgBotLeft {
+	width: 706px;
+	height: 206px;
+	display: block;
+	background: url(images/subBot0.png);
+}
+
+.sub2 .subBgTopLeft {
+	width: 832px;
+	height: 7px;
+	display: block;
+	background: url(images/subTop2.png);
+}
+
+.sub4 .subBgTopLeft {
+	width: 832px;
+	height: 7px;
+	display: block;
+	background: url(images/subTop4.png);
+}
+
+.sub2 .subBgBotLeft, .sub4 .subBgBotLeft {
+	width: 832px;
+	height: 206px;
+	display: block;
+	background: url(images/subBot2.png);
+}
+
+.features {
+	position: absolute;
+	left: 195px;
+	top: 19px;
+}
+
+.features i {
+	width: 174px;
+	display: block;
+	float: left;
+	margin: 0 40px;
+}
+
+.features a:hover img {
+	border: 1px solid #448c8c;
+}
+
+.features i img {
+	display: block;
+	float: left;
+	border: 1px solid #d7d8d8;
+	margin-bottom: 12px;
+}
+
+.features i em {
+	width: 174px;
+	display: block;
+	float: left;
+	line-height: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class="wrapper"> 
+	<div class="head">
+		<div class="topNav">
+			<div class="topNavList">
+				<a href="#">关于我们</a>
+				<a href="#">行业考察</a>
+				<a href="#">产品中心</a>
+				<a href="#">技术服务</a>
+				<a href="#">新闻中心</a>
+				<a href="#">联系我们</a>
+				<div class="topNavSub">
+					<div class="activeLeft"></div>
+					<div class="activeRight"></div>
+				</div>
+			</div>
+		</div>
+		<div class="subNavWrapper">
+			<div class="subNavSet">
+				<div class="subNav sub0">
+					<span><i class="subBgTopLeft"></i><i class="subBgBotLeft"></i></span>
+					<ul>
+						<li>
+							<a href="#">关于我们1</a> 
+							<a href="#">关于我们2</a> 
+							<a href="#">关于我们3</a>
+						</li>
+					</ul>
+					<span class="features">
+						<i><a href="#"><img width="177" height="100" src="images/index1.jpg"><em><strong>净世界，美生活。</strong></em></a></i>
+						<i><a href="#"><img width="177" height="100" src="images/index1.jpg"><em><strong>诚信 专业 激情。</strong></em></a></i>
+					</span>
+				</div>
+				<div class="subNav sub1">
+					<span><i class="subBgTopLeft"></i><i class="subBgBotLeft"></i></span>
+					<ul>
+						<li>
+							<a href="#">行业考察1</a> 
+							<a href="#">行业考察2</a> 
+							<a href="#">行业考察3</a>
+						</li>
+					</ul>
+					<span class="features">
+						<i><a href="#"><img width="177" height="100" src="images/index1.jpg"><em><strong>诚信 专业 激情。</strong></em></a></i> 
+						<i><a href="#"><img width="177" height="100" src="images/index1.jpg"><em><strong>行业的领跑者。</strong></em></a></i>
+					</span>
+				</div>
+				<div class="subNav sub2">
+					<span><i class="subBgTopLeft"></i><i class="subBgBotLeft"></i></span>
+					<ul>
+						<li>
+							<a href="#">电子功能材料</a> 
+							<a href="#">高性能纤维材料</a> 
+							<a href="#">净化工程</a> 
+							<a href="#">超净产品</a> 
+							<a href="#">医疗产品</a> 
+							<a href="#">护理产品</a> 
+							<a href="#">精密模具</a>
+						</li>
+					</ul>
+					<span class="features">
+						<i><a href="#"><img width="177" height="100" src="images/index1.jpg"><em><strong>精雕细刻 巧夺天工。</strong></em></a></i>
+						<i><a href="#"><img width="177" height="100" src="images/index1.jpg"><em><strong>精益求精 无微不至。</strong></em></a></i>
+					</span>
+				</div>
+				<div class="subNav sub3">
+					<span><i class="subBgTopLeft"></i><i class="subBgBotLeft"></i></span>
+					<ul>
+						<li>
+							<a href="#">技术研发</a>
+							<a href="#">专业测试</a> 
+							<a href="#" >技术咨询服务</a>
+						</li>
+					</ul>
+					<span class="features">
+						<i><a href="#" ><img width="177" height="100" src="images/index1.jpg" ><em><strong>高新技术产品的研发和生产。</strong></em></a></i>
+						<i><a href="#"><img width="177" height="100" src="images/index2.jpg"><em><strong>提供优质的品牌产品和服务。</strong></em></a></i>
+					</span>
+				</div>
+				<div class="subNav sub4">
+					<span><i class="subBgTopLeft"></i><i class="subBgBotLeft"></i></span>
+					<ul>
+						<li>
+							<a href="#"> 基本信息</a> 
+							<a href="#">公司治理</a> 
+							<a href="#">定期报告</a> 
+							<a href="#"> 临时公告</a> 
+							<a href="#">投资者交流</a>
+							<a href="#">分析研究报告</a> 
+							<a href="#"> 股息资料</a>
+						</li>
+					</ul>
+					<span class="features">
+						<i><a href="#"><img width="177" height="100" src="images/index1.jpg"><em><strong>沟通创造价值。</strong></em></a></i>
+						<i><a href="#"><img width="177" height="100" src="images/index1.jpg"><em><strong>稳定和可持续发展。</strong></em></a></i>
+					</span>
+				</div>
+				<div class="subNav sub5">
+					<span><i class="subBgTopLeft"></i><i class="subBgBotLeft"></i></span>
+					<ul>
+						<li>
+							<a href="#">人才理念</a> 
+							<a href="#">人才招聘</a> 
+						</li>
+					</ul>
+					<span class="features">
+						<i><a href="#"><img width="177" height="100" src="images/index1.jpg"><em><strong>xxxxxxxxxxxxx。</strong></em></a></i>
+						<i><a href="#"><img width="177" height="100" src="images/index1.jpg"><em><strong>xxxxxxxxxxx。</strong></em></a></i>
+					</span>
+				</div>
+			</div>
+		</div>     
+	</div>
+</div>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script>$(document).ready(function() {
+
+
+    nav();
+
+})
+
+var idx;
+var arr_offsetX = [0, 144, 233, 345, 400, 450];
+
+function nav() {
+
+    $(".topNavList a").hover(function() {
+
+        idx = $(".topNavList a").index(this);
+
+        $(".subNavWrapper").show();
+        $(".activeLeft").show();
+        $(".activeRight").show();
+
+        var offsetXArrow = $(".topNavList a").eq(idx).position().left - 455;
+        var w = $(".topNavList a").eq(idx).width() + 22;
+
+        $(".topNavList a").eq(idx).addClass("activeTopNav");
+        $(".activeLeft").css("left", offsetXArrow+'px');
+        $(".activeRight").css("left", offsetXArrow+w+'px');
+
+        $(".subNavSet div").eq(idx).show();
+
+        if (idx == 0 || idx == 1 || idx == 3 || idx == 5) {
+            $(".subNavSet .subNav").eq(idx).find("ul").css("width", "132px");
+            $(".subNavSet .features").eq(idx).css("left", "195px");
+        } else {
+            $(".subNavSet .subNav").eq(idx).find("ul").css("width", "295px");
+            $(".subNavSet .features").eq(idx).css("left", "315px");
+        };
+
+    }, function() {
+        
+        $(".subNavWrapper").hide();
+        $(".activeLeft").hide();
+        $(".activeRight").hide();
+
+        $(".topNavList a").eq(idx).removeClass("activeTopNav");
+
+        $(".subNavSet div").eq(idx).hide();
+
+    })
+	$(".subNavSet div").hover(function() {
+        $(".subNavWrapper").show();
+        $(".topNavList a").eq(idx).addClass("activeTopNav");
+        $(".activeLeft").show();
+        $(".activeRight").show();
+        $(this).show();
+
+    }, function() {
+        $(".subNavWrapper").hide();
+        $(".activeLeft").hide();
+        $(".topNavList a").eq(idx).removeClass("activeTopNav");
+        $(".activeRight").hide();
+        $(this).hide();
+
+    })
+    
+
+}
+</script>
+<!-- 代码部分end -->
+</body>
+</html>

@@ -1,0 +1,159 @@
+*{word-wrap:break-word;margin:0;padding:0;}
+body, ul, ol, li, dl, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset, .pr, .pc {
+    margin: 0;
+    padding: 0;
+}
+.wp{width:960px;margin:0 auto;}
+body,input,button,select,textarea {
+	font:12px/1.5 Tahoma,'Microsoft Yahei','Simsun';
+	color:#444;
+}
+#toptb{min-width:960px;background:#F2F2F2;line-height:28px;border-bottom:1px solid #CDCDCD;color:black;height:28px;}
+#toptb a {
+    float: left;
+    padding: 0 4px;
+    height: 28px;
+}
+
+.y{float:right;}
+.z{float:left;}
+a{text-decoration:none;color:#333;}
+.switchwidth{background:url(../images/switch_width.png)  no-repeat;
+margin-top:5px;
+padding:0 !important;
+width:23px;
+height:18px !important;
+text-indent:-9999px;
+overflow:hidden;}
+.cl {
+	zoom:1;
+}
+table {
+    empty-cells: show;
+    border-collapse: collapse;
+}
+.ftid {
+    float: left;
+    margin-right: 6px;
+	
+}
+.ftid a{
+
+margin-left:-5px;	
+display: block;
+overflow: hidden;
+padding: 0 17px 0 4px;
+height: 21px;
+line-height: 21px;
+text-decoration: none !important;
+font-size: 12px;
+font-weight: 400;
+color: #444 !important;
+border: 1px solid;
+border-color: #848484 #E0E0E0 #E0E0E0 #848484;
+background: #FFF url(../images/newarow.gif) no-repeat 100% 0;
+}
+.ftid select{
+	width:94px;
+	float:left;
+	height:23px;
+}
+#hd h2{
+	float:left;
+	padding:0 20px 8px 0;
+	
+}
+#hd .fastlg{
+	padding-top:10px;
+	
+}
+#hd .wp {
+    padding: 10px 0 0;
+}
+.fastlg{
+	line-height:24px;
+}
+.fastlg td{
+	padding:2px 0 2px 4px;
+}
+.fastlg_l {
+    padding-right: 4px !important;
+    border-right: 1px solid #E5EDF2;
+}
+.fastlg_fm{
+	border-right:1px solid #E5EDF2;
+}
+.pn {
+    vertical-align: middle;
+    overflow: hidden;
+    margin-right: 3px;
+    padding: 0;
+    height: 23px;
+    border: 1px solid #999;
+    background: #E5E5E5 url(http://bbs.houdunwang.com/static/image/common/pn.png) repeat-x 0 0;
+    cursor: pointer;
+    -moz-box-shadow: 0 1px 0 #E5E5E5;
+    -webkit-box-shadow: 0 1px 0 #E5E5E5;
+    box-shadow: 0 1px 0 #E5E5E5;
+}
+.pn em, .pn strong {
+    font-weight: 700;
+}
+.pn em, .pn span, .pn strong {
+    padding: 0 10px;
+    line-height: 21px;
+}
+em, cite, i {
+    font-style: normal;
+}
+#ls_fastloginfield_ctrl {
+    line-height: 20px;
+    border: none;
+    background-color: transparent;
+    background-position: 100% -1px;
+}
+.xi2, .xi2 a, .xi3 a {
+    color: #369;
+}
+.xw1{font-weight:700;}
+.pr, .pc {
+    vertical-align: middle;
+    margin: 0 5px 1px 0;
+    padding: 0;
+}
+.hm {
+    text-align: center;
+}
+.xg1, .xg1 a {
+    color: #999 !important;
+}
+.vm {
+    vertical-align: middle;
+}
+a img{border:none;}
+#nv{float:left;clear:both;background:#2B7ACD url(../images/nv.png) no-repeat 0 0;}
+#nv li{
+	list-style:none;
+	float:left;
+	height:33px;
+	line-height:33px;
+	background:url(../images/nv_a.png) no-repeat 100% 0;
+	font-size:14px;
+	font-weight:700;}
+#nv li a{
+	color:#FFF;
+	padding:0 15px;
+}
+#nva{
+	float:right;
+	display:inline;
+	margin: 5px 8px 0;
+	padding-right: 10px;
+	width: 103px;
+	height: 24px;
+	background: url(../images/qmenu.png) no-repeat 0 0;
+	line-height: 24px;
+	text-align: center;
+	color: #369;
+	font-weight: 700;
+	overflow: hidden;}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-type" content="text/html">
+<title>
+周帝的作品
+</title>
+<style type="text/css">
+	body{margin:0;padding:0;text-align:center;}
+	#outer , #change{ margin-top:15px;}
+	#outer div{ width:100px;height:100px;background:black;margin-right:10px;display:inline-block;}
+</style>
+</head>
+<body>
+<button id="change">点击将div变成红色</button>
+<div id="outer">
+<div ></div>
+<div ></div>
+<div ></div> 
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+	var con=document.getElementById("outer"),
+		a=con.getElementsByTagName("div");
+		document.getElementById("change").onclick=function(){
+			for(i=0,l=a.length;1<l;i++){
+				a[i].style.background="red";
+			}
+		}
+	}
+</script>
+</html>

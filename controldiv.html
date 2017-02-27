@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-cn">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html">
+	<title>周帝的作品</title>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	</head>
+	<body class="text-center">
+		<div class="form-group">
+		<input type="button" value="变宽" id="changewidth" class="btn btn-primary"/>
+		<input type="button" value="变高" id="changeheight"class="btn btn-success"/>
+		<input type="button" value="变色" id="changecolor" class="btn btn-warning"/>
+		<input type="button" value="隐藏" id="todisplay" class="btn btn-info"/>
+		<input type="reset" value="重置" id="reset" class="btn btn-danger" />
+		</div>
+		<div class="" style="background:black;width:100px;height:100px;margin:auto;" id="blackblock"></div>
+	</body>
+	
+	
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script>
+	var color=["blue","red","green","yellow","pink","cyan","teal","orange","tan","slategray"],
+		a=color[Math.round(Math.random()*10)];
+	var changewidth=document.getElementById("changewidth");
+	var changeheight=document.getElementById("changeheight");
+	var changecolor=document.getElementById("changecolor");
+	var todisplay=document.getElementById("todisplay");
+	var reset=document.getElementById("reset");
+	var block=document.getElementById("blackblock");
+	var eventUtil={
+         	// 添加句柄
+         	addHandler:function(element,type,handler){
+               if(element.addEventListener){
+                 element.addEventListener(type,handler,false);
+               }else if(element.attachEvent){
+                 element.attachEvent('on'+type,handler);
+               }else{
+                 element['on'+type]=handler;
+               }
+         	},
+         	// 删除句柄
+         	removeHandler:function(element,type,handler){
+               if(element.removeEventListener){
+                 element.removeEventListener(type,handler,false);
+               }else if(element.detachEvent){
+                 element.detachEvent('on'+type,handler);
+               }else{
+                 element['on'+type]=null;
+               }
+         	}
+			}
+			eventUtil.addHandler(changewidth,'click',function(){
+			block.style.background="black";
+			block.style.width="200px";
+			block.style.height="100px";
+			block.style.margin="auto";
+			});
+			eventUtil.addHandler(changeheight,'click',function(){
+			block.style.background="black";
+			block.style.width="100px";
+			block.style.height="200px";
+			block.style.margin="auto;";
+			});
+			eventUtil.addHandler(changecolor,'click',function(){
+			block.style.background=a;
+			block.style.width="100px";
+			block.style.height="100px";
+			block.style.margin="auto";
+			});
+			eventUtil.addHandler(todisplay,'click',function(){
+			block.style.display="none";
+			});
+			eventUtil.addHandler(reset,'click',function(){
+			block.style.display="block";
+			block.style.background="black";
+			block.style.width="100px";
+			block.style.height="100px";
+			block.style.margin="auto";
+			});
+			</script>
+</html>

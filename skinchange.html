@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-cn">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html">
+	<title>周帝的作品</title>
+
+	<style type="text/css">
+	body{background-color:#FFDDDD;margin:0;padding:0;font-size:12px;}
+	.outer{width:500px;margin:0 auto;overflow:hidden;}
+	.removepoint{list-style:none;}
+	.skin{display:block;height:14px; margin:10px 0;}
+	.navg{display:block;height:27px;}
+	.skin li{float:left;width:6px;height:6px;cursor:pointer;margin-right:10px;border-width:4px;border-style:solid;}
+	.navg li{float:left;width:75px;text-align:center;border:1px solid #FFF;margin-left:-1px;background-color:red;height:25px;line-height:25px;}
+	.navg a{text-decoration:none;color:#FFF;}
+	#red{background-color:red;border-color:red;}
+	#green{background-color:green;border-color:green;}
+	#black{background-color:black;border-color:black;}
+	</style>
+	</head>
+	<body id="body">
+	<div class="outer">
+		<ul class="skin removepoint">
+			<li id="red"></li>
+			<li id="green"></li>
+			<li id="black"></li>
+		</ul>
+		<ul class="navg removepoint" id="navg">
+			<li><a href="#">新闻</a></li>
+			<li><a href="#">娱乐</a></li>
+			<li><a href="#">体育</a></li>
+			<li><a href="#">电影</a></li>
+			<li><a href="#">音乐</a></li>
+			<li><a href="#">旅游</a></li>
+		</ul>
+	</div>
+	</body>
+	<script>
+	/*window.onload=function(){
+	var obj=document.getElementsByTagName("ul")[1],
+		lis=obj.getElementsByTagName("li");
+		
+		document.getElementById("red").onclick=function(){
+		document.getElementById("red").style="background-color:#FFF;";
+		document.getElementById("green").style="background-color:green;";
+		document.getElementById("black").style="background-color:black;";
+		document.getElementById("body").style="background-color:#FFDDDD;";
+		for(i=0,l=lis.length;i<l;i++){
+			lis[i].style="background-color:red;"
+		}
+		}
+		document.getElementById("green").onclick=function(){
+		document.getElementById("green").style="background-color:#FFF;";
+		document.getElementById("red").style="background-color:red;";
+		document.getElementById("black").style="background-color:black;";
+		document.getElementById("body").style="background-color:#A3C5A8;";
+		for(i=0,l=lis.length;i<l;i++){
+			lis[i].style="background-color:green;"
+		}
+		}
+		document.getElementById("black").onclick=function(){
+		document.getElementById("black").style="background-color:#FFF;";
+		document.getElementById("red").style="background-color:red;";
+		document.getElementById("green").style="background-color:green;";
+		document.getElementById("body").style="background-color:#BEBEBE;";
+		for(i=0,l=lis.length;i<l;i++){
+			lis[i].style="background-color:black;"
+		}
+		}
+		}*/
+	</script>
+	
+	<script>
+	window.onload=function(){
+	var obj=document.getElementsByTagName("ul")[1],
+		lis=obj.getElementsByTagName("li");
+	var red=document.getElementById("red");
+	var black=document.getElementById("black");
+	var green=document.getElementById("green");
+	var body=document.getElementById("body");
+	function bered(){
+		red.style.background="#FFF";
+		green.style.background="green";
+		black.style.background="black";
+		body.style.background="#FFDDDD";
+		for(i=0,l=lis.length;i<l;i++){
+			lis[i].style.background="red";
+		}
+	}
+	function begreen(){
+		green.style.background="#FFF";
+		red.style.background="red";
+		black.style.background="black";
+		body.style.background="#A3C5A8";
+		for(i=0,l=lis.length;i<l;i++){
+			lis[i].style.background="green";
+		}
+	}
+	function beblack(){
+		black.style.background="#FFF";
+		red.style.background="red";
+		green.style.background="green";
+		body.style.background="#BEBEBE";
+		for(i=0,l=lis.length;i<l;i++){
+			lis[i].style.background="black";
+		}
+	}
+	var eventutil={
+	addHandler:function(element,type,handler){
+		if(element.addEventListener){
+		element.addEventListener(type,handler,false);
+		}else if(element.attachEvent){
+		element.attachEvent('on'+type,handler);
+		} else{
+		element['on'+type]=handler;
+		}
+		},
+		removeHandler:function(element,type,handler){
+		if(element.removeEventListener){
+		element.removeEventListener(type,handler,false);
+		}else if(element.detachEvent){
+		element.detachEvent('on'+type,handler);
+		} else{
+		element['on'+type]=null;
+		}
+		}
+		}	
+		eventutil.addHandler(red,'click',bered);
+		eventutil.addHandler(green,'click',begreen);
+		eventutil.addHandler(black,'click',beblack);
+	}
+	</script>
+</html>

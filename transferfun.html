@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>周帝的作品</title>
+
+<style type="text/css">
+body{text-align:center;}
+</style>
+</head>
+<body>
+<form>
+	<p class="form-group"><input type="text"value="湖北省"id="province"></p>
+	<p class="form-group"><input type="text"value="大冶市" id="minicipality" /></p>
+	<p class="form-group"><input type="button"value="传参数" id="button" /></p>
+	
+</form>
+</body>
+<script type="text/javascript">
+
+document.getElementById("button").onclick=function(){
+	alert(document.getElementById("province").value);
+	alert(document.getElementById("minicipality").value);
+}
+
+</script>
+
+</html>

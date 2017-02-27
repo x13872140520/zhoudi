@@ -1,0 +1,101 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<style>
+
+body,ul,li{margin:0;padding:0;}
+body{background:#000;}
+img{border:0;border-radius:3px;}
+ul{list-style-type:none;}
+#box{width:212px;border:5px solid #fff;overflow:hidden;zoom:1;background:#fff;border-radius:5px;margin:10px auto;padding:0 0 3px 3px;}
+#box li,#box li img{float:left;width:50px;height:50px;}
+#box li{margin:3px 3px 0 0;}
+#box li.first{position:relative;}
+#box li.first,#box li.first img{width:156px;height:156px;}
+#box li.first div{position:absolute;top:0;left:0;width:156px;height:156px;display:none;opacity:0.5;filter:alpha(opacity=50);background:#fff url(img/loading.gif) 50% 50% no-repeat;}
+</style>
+</head>
+<body>
+<ul id="box">
+<li class="first">
+<img src="images/11.jpg" alt="caricon"/>
+<div style="display: none;"></div>
+</li>
+<li>
+<a href="javascript:;">
+<img src="images/12.jpg" alt="caricon"/>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<img src="images/13.jpg" alt="caricon"/>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<img src="images/14.jpg" alt="caricon"/>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<img src="images/15.jpg" alt="caricon"/>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<img src="images/16.jpg" alt="caricon"/>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<img src="images/17.jpg" alt="caricon"/>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<img src="images/18.jpg" alt="caricon"/>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<img src="images/19.jpg" alt="caricon"/>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<img src="images/20.jpg" alt="caricon"/>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<img src="images/21.jpg" alt="caricon"/>
+</a>
+</li>
+<li>
+<a href="javascript:;">
+<img src="images/22.jpg" alt="caricon"/>
+</a>
+</li>
+</ul>
+</body>
+<script type="text/javascript">
+
+window.onload = function ()
+{
+	var oImg = document.getElementById("box").getElementsByTagName("img");
+	var oDiv = document.getElementsByTagName("div")[0];
+	for (var i = 1; i < oImg.length; i++)
+	{
+		oImg[i].onmouseover = function ()
+		{						
+			var img = new Image();
+			img.src = oImg[0].src = this.src.replace(/small/,"big");
+			oDiv.style.display = "block";
+			img.complete ? oDiv.style.display = "none" : (oImg[0].onload = function() {oDiv.style.display = "none"})
+		}	
+	}
+};
+</script>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>carousel</title>
+<style>
+*{margin:0;padding:0;}
+#fk{width:560px;height:300px;margin:20px auto; position:relative;}
+#fk img{position:absolute;top:0px;left:0px;display:none;}
+#fk ul{position:absolute;left:45%;bottom:23px;}
+#fk ul li{float:left;margin-right:8px;list-style:none;background:black;width:12px;height:12px;border-radius:50%;}
+.prev{background:url(images/focus_lr0918.png) no-repeat scroll 0% 0%;left:10px;}
+.next{background:url(images/focus_lr0918.png) no-repeat scroll -52px 0%;right:10px;}
+.prev , .next{
+	position:absolute;
+	display:inline-block;
+	width:28px;
+	height:60px;
+	cursor:pointer;
+	z-index:10;
+	text-indent:-9999px;
+	top:45%;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="fk">
+	<img src="images/36.jpg" alt="" style="display:block;"/>
+	<img src="images/37.jpg" alt=""/>
+	<img src="images/38.jpg" alt=""/>
+	<img src="images/39.jpg" alt=""/>
+	<img src="images/40.jpg" alt=""/>
+	<ul>
+		<li style="background:#A10000;"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<a class="prev" id="prev" href="javascript:void(0);">1</a>
+	<a class="next" id="next" href="javascript:void(0);">2</a>
+</div>
+<script type="text/javascript">
+window.onload=function(){
+	var fk=document.getElementById("fk");
+	var imgs=fk.getElementsByTagName("img");
+	var lis=fk.getElementsByTagName("li");
+	var prev=document.getElementById("prev");
+	var next=document.getElementById("next");
+	var c=0;//用一个变量标记状态，后面不同操作方式操作同一个对象之后都要修改此变量
+	//定时器里用的图片切换函数 
+	function run(){
+		c++;
+		if(c==5){
+			c=0;
+		}
+		for(var i=0; i<imgs.length;i++){
+			imgs[i].style.display="none";
+			lis[i].style.background="black";
+		}
+
+		imgs[c].style.display="block";
+		lis[c].style.background="#A10000";
+
+	}
+	var sint=setInterval(run,2000);
+	for(var i=0;i<imgs.length;i++){
+		lis[i].serialnumber=i;//发小纸条
+		lis[i].onmouseover=function(){
+			c=this.serialnumber;
+			window.clearInterval(sint);
+			for(var n=0;n<imgs.length;n++){
+			imgs[n].style.display="none";
+			lis[n].style.background="black";
+			}
+			imgs[c].style.display="block";
+			lis[c].style.background="#A10000";
+
+		}
+		lis[i].onmouseout=function(){
+			sint=setInterval(run,2000);
+		}
+	}
+	prev.onclick=function(){
+		
+		for(var i=0; i<imgs.length;i++){
+			imgs[i].style.display="none";
+			lis[i].style.background="black";
+		}
+		if(c==0){
+			c=imgs.length-1;
+			imgs[c].style.display="block";
+			lis[c].style.background="#A10000";
+			c=c-1;
+		}else{
+		imgs[c-1].style.display="block";
+		lis[c-1].style.background="#A10000";
+			c=c-1;}
+			
+	}
+	prev.onmouseover=function(){
+	prev.style.background="url(images/focus_lr0918.png) no-repeat scroll 0% -62px;";
+	}
+	prev.onmouseout=function(){
+	prev.style.background="url(images/focus_lr0918.png) no-repeat scroll 0% 0%;left:10px;";
+	}
+	next.onclick=function(){
+		
+		for(var i=0; i<imgs.length;i++){
+			imgs[i].style.display="none";
+			lis[i].style.background="black";
+		}
+		if(c==imgs.length-1){
+			c=0;
+			imgs[c].style.display="block";
+			lis[c].style.background="#A10000";
+			c=c+1;
+		}else{
+		imgs[c+1].style.display="block";
+		lis[c+1].style.background="#A10000";
+			c=c+1;}
+			
+	}
+	next.onmouseover=function(){
+	next.style.background="url(images/focus_lr0918.png) no-repeat scroll -52px -62px;left:10px;";
+	}
+	next.onmouseout=function(){
+	next.style.background="url(images/focus_lr0918.png) no-repeat scroll -52px 0%;left:10px;";
+	}
+}
+</script>
+</body>
+
+</html>

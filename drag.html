@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Bootstrap 101 Template</title>
+
+ 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<style type="text/css">
+	.box{width:200px; height:200px;border:1px solid red;}
+	p{width:100px; height:100px;border:1px solid green;display:block;}
+	</style>
+	<script>
+	window.onload=function(){
+	var box =document.getElementById("box");
+	var box2 =document.getElementById("box2");
+	//移动物体区域
+	box2.ondragstart=function(e){
+	e.dataTransfer.setData("Text","helloword");
+	box.innerHTML="start";
+	box.style.opacity="0.4";
+	}
+	box2.ondrag=function(){
+	//box.innerHTML="moving";
+	}
+	box2.ondragend=function(){
+	//box.innerHTML="finshed";
+	}
+	//投放区
+	box.ondragenter=function(e){
+	
+	box.innerHTML="进入";
+	box.style.border="2px solid blue";
+	e.preventDefault();
+	}
+	box.ondragover=function(e){
+
+	box.innerHTML="移动";
+	e.preventDefault();
+	}
+	box.ondragleave=function(e){
+	
+	box.innerHTML="离开";
+	box.style.border="1px solid red";
+	e.preventDefault();
+	}
+	box.ondrop=function(e){
+	box.style.opacity="1";
+		e.preventDefault();
+		box.appendChild(box2);
+		var data=e.dataTransfer.getData("Text");
+		box.appendChild(document.getElementById(data));
+		
+	}
+	}
+   </script>
+  </head>
+  <body>
+  <div class="box" id="box"></div>
+  <p id="box2" draggable="true">请拖拽我</p>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   
+  </body>
+</html>

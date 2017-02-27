@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-type" content="text/html">
+<title>
+周帝的作品
+</title>
+<style type="text/css">
+body{text-align:center;font-size:12px;}
+#box{width:180px;height:180px;background:black;color:#FFF;margin:0 auto;}
+</style>
+</head>
+<body>
+<div>
+<p><label>属性名:<input type="text" value="background" id="name"/></label></p>
+<p><label>属性值:<input type="text" value="blue" id="value"/></label></p>
+<p><button id="sure">确定</button><button id="reset">重置</button></p>
+</div>
+<div id="box">在上方输入框输入"属性名"及"属性值"，点击确定按钮查看效果。</div>
+</body>
+<script type="text/javascript">
+
+	var name=document.getElementById("name").value;
+	var values=document.getElementById("value").value;
+	var sure=document.getElementById("sure");
+	var reset=document.getElementById("reset");
+	var box=document.getElementById("box");
+	sure.onclick=function(){
+	box.style=name+":"+values+";";
+	}
+	reset.onclick=function(){
+	box.style="width:180px;height:180px;background:black;color:#FFF;margin:0 auto;";
+	name.innerHTML="background";
+	values.value="blue";
+	}
+	
+</script>
+</html>

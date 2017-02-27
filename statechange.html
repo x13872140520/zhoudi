@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-type" content="text/html">
+<title>
+周帝的作品
+</title>
+<style type="text/css">
+.hid{list-style:none;padding-right:40px;margin:0;display:none;}
+.province,.hid li{width:100px;height:30px;line-height:30px;border:1px solid #ccc;text-align:center;margin:auto;margin-bottom:-1px;cursor:pointer;}
+</style>
+</head>
+<body>
+<div class="province" id="province">湖北省</div>
+<ul class="hid" id="hid">
+<li>广东省</li>
+<li>广西省</li>
+<li>湖南省</li>
+<li>河南省</li>
+</ul>
+</body>
+
+<script type="text/javascript">
+window.onload=function(){
+var province=document.getElementById("province");
+var hid=document.getElementById("hid");
+var lis=hid.getElementsByTagName("li");
+province.onclick=function(e){
+e =e || window.event;
+if(e.stopPropagation){
+	e.stopPropagation();
+}else{e.cancelBubble=true;}
+hid.style.display="block";
+}
+
+for(var i=0,l=lis.length;i<l;i++){
+	lis[i].onmouseover=function(){
+	this.style.backgroundColor="#CCC";
+	}
+	lis[i].onmouseout=function(){
+	this.style.backgroundColor="#FFF";
+	}
+	lis[i].onclick=function(e){
+	e =e || window.event;
+	if(e.stopPropagation){
+	e.stopPropagation();
+	}else{e.cancelBubble=true;}
+	province.innerHTML=this.innerHTML;
+	hid.style.display="none";
+	}
+}
+document.onclick=function(){
+
+hid.style.display="none";	
+}
+
+}
+</script>
+</html>

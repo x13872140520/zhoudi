@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../favicon.ico">
+<title>周帝的作品</title>
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+</link>
+
+<style>
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+	box-sizing:border-box;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+	overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+margin-bottom: 20px;
+display:none;
+	width:210px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.menu_head{
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 14px;
+line-height:55px;
+cursor:pointer;
+position:relative;
+background:#f1f1f1 url(images/pro_left.png)no-repeat;
+background-position:165px center;
+margin:0;
+color:#428bca;
+width:210px;
+height:55px;
+padding-left:15px;
+}
+.menu_head:hover{
+background-color:#DCDCDC;
+}
+.current{
+background:#f1f1f1 url(images/pro_down.png)no-repeat;
+background-position:165px center;
+}
+	
+</style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+
+
+<div class="navbar-header">
+<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">周帝的demo</a>
+<audio src="audio/kennyG.mp3"  controls="controls"	 style="margin-top:12px;"></audio>
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a href="#">Dashboard</a>
+</li>
+<li>
+<a href="#">Settings</a>
+</li>
+<li>
+<a href="#">Profile</a>
+</li>
+<li>
+<a href="#">Help</a>
+</li>
+</ul>
+<form class="navbar-form navbar-right">
+<input class="form-control" placeholder="Search..." type="text">
+</form>
+</div>
+</div>
+</nav>
+<div class="container-fluid">
+<div class="row">
+<div class="sidebar">
+<p class="menu_head">常用组件</p>
+<ul class="nav nav-sidebar">
+<li><a href="qqpanel.html" target="myframe">仿QQ登录面板可拖拽</a></li>
+<li><a href="draw.html" target="myframe">抽奖系统</a></li>
+<li><a href="videoplay.html" target="myframe">HTML5视频播放</a></li>
+<li><a href="imagecollect.html" target="myframe">图片合集特效</a></li>
+<li><a href="opacityimage.html" target="myframe">图片列表：鼠标移入/移出改变图片透明度</a></li>
+<li><a href="calculator.html" target="myframe">计算器</a></li>
+<li><a href="count.html" target="myframe">求和</a></li>
+<li><a href="divinner.html" target="myframe">读取段落结构</a></li>
+<li><a href="statechange.html" target="myframe">状态切换</a></li>
+<li><a href="keeppsw.html" target="myframe">cookie的写入删除</a></li>
+<li><a href="skinchange.html" target="myframe">网页换肤</a></li>
+<li><a href="transferfun.html" target="myframe">函数接收参数并弹出</a></li>
+<li><a href="divchange.html" target="myframe">用循环将三个DIV变成红色</a></li>
+<li><a href="mousemove.html" target="myframe">鼠标的移入/移出样式改变</a></li>
+<li><a href="allchecked.html" target="myframe">全选/全不选</a></li>
+</ul>
+<p class="menu_head">窗口特效</p>
+<ul class="nav nav-sidebar">
+<li><a href="login.html" target="myframe">登录特效1 JQUERY+CSS3</a></li>
+<li><a href="jqtransition.html"target="myframe"/>banner特效1 JQUERY+CSS3</a></li>
+<li><a href="cloud.html"target="myframe"/>纯CSS3做的特效1</a></li>
+<li><a href="submitting.html"target="myframe"/>纯CSS3做的特效2</a></li>
+</ul>
+<p class="menu_head">导航菜单</p>
+<ul class="nav nav-sidebar">
+<li><a href="tabcontrol.html" target="myframe">简易导航栏</a></li>
+<li><a href="hospitalpage.html" target="myframe">HTML5医院导航</a></li>
+<li><a href="companynav.html" target="myframe">HTML5企业导航</a></li>
+<li><a href="responsivelayout.html" target="myframe">CSS3响应式布局</a></li>
+<li><a href="carousel.html" target="myframe">自动轮播广告</a></li>
+</ul>
+<p class="menu_head">项目</p>
+<ul class="nav nav-sidebar">
+<li><a href="program1.html" target="myframe">商城项目1(仅部分代码)</a></li>
+<li><a href="program2.html" target="myframe">商城项目2(仅部分代码)</a></li>
+<li><a href="program3.html" target="myframe">商城项目3(仅部分代码)</a></li>
+<li><a href="program4.html" target="myframe">商城项目4(仅部分代码)</a></li>
+<li><a href="program5.html" target="myframe">商城项目5(仅部分代码)</a></li>
+<li><a href="program6.html" target="myframe">商城项目6(仅部分代码)</a></li>
+</ul>
+
+</div>
+
+ 
+<iframe name="myframe" style=" width:1000px;height:1000px;margin-left:210px;margin-top:20px;" frameborder="0"></iframe>
+
+
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var a=true;
+$("p").click(function(){
+$(this).next('ul').slideToggle('slow');
+
+if(a){
+	$(this).addClass("current");
+	a=!a;
+}else{
+	$(this).removeClass("current");
+	a=!a;
+}
+
+
+});
+});
+</script>
+
+
+<div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" style="position: absolute; left: 0px; top: -9999px; width: 15px; height: 15px; z-index: 999999999;" title="" data-original-title="Copy to clipboard">
+<object id="global-zeroclipboard-flash-bridge" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="100%" height="100%">
+<param name="movie" value="/assets/flash/ZeroClipboard.swf?noCache=1481001628372">
+<param name="allowScriptAccess" value="sameDomain">
+<param name="scale" value="exactfit">
+<param name="loop" value="false">
+<param name="menu" value="false">
+<param name="quality" value="best">
+<param name="bgcolor" value="#ffffff">
+<param name="wmode" value="transparent">
+<param name="flashvars" value="trustedOrigins=v3.bootcss.com%2C%2F%2Fv3.bootcss.com%2Chttp%3A%2F%2Fv3.bootcss.com">
+<embed src="/assets/flash/ZeroClipboard.swf?noCache=1481001628372" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="global-zeroclipboard-flash-bridge" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="trustedOrigins=v3.bootcss.com%2C%2F%2Fv3.bootcss.com%2Chttp%3A%2F%2Fv3.bootcss.com" scale="exactfit" width="100%" height="100%">
+</object>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" preserveAspectRatio="none" style="visibility: hidden; position: absolute; top: -100%; left: -100%;">
+<defs>
+<text x="0" y="10" style="font-weight:bold;font-size:10pt;font-family:Arial, Helvetica, Open Sans, sans-serif;dominant-baseline:middle">200x200</text>
+</svg>
+</body>
+</html>

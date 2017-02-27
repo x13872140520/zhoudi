@@ -1,0 +1,125 @@
+<!doctype>
+<html>
+<head>
+	<meta name="keywords" content="放大镜"/>
+	<meta name="description" content="放大镜的用法"/>
+	<title>
+	</title>
+	<style> 
+	
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        #demo {
+            display: block;
+            width: 400px;
+            height: 255px;
+            margin: 200px;
+            position: relative;
+            border: 1px solid #ccc;
+        }
+
+        #small-box {
+            position: relative;
+            z-index: 1;
+        }
+
+        #float-box {
+            display: none;
+            width: 160px;
+            height: 120px;
+            position: absolute;
+            background: #ffffcc;
+            border: 1px solid #ccc;
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        }
+
+        #mark {
+            position: absolute;
+            display: block;
+            width: 400px;
+            height: 255px;
+            background-color: #fff;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            z-index: 10;
+        }
+
+        #big-box {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 460px;
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            z-index: 1;;
+        }
+
+        #big-box img {
+
+            position: absolute;
+            z-index: 5
+        }
+    </style>
+	
+</head>
+<body>
+	<div id="demo">
+    <div id="small-box">
+        <div id="mark"></div>
+        <div id="float-box"></div>
+        <img src="img/macbook-small.jpg"/>
+    </div>
+    <div id="big-box">
+        <img src="img/macbook-big.jpg"/>
+    </div>
+</div>
+<script>
+window.onload=function(){
+	var demo=document.getElementById('demo');
+	var objMark=document.getElementById('mark');
+	var objFloatBox=document.getElementById('float-box');
+	var objBigBox=document.getElementById('big-box');
+	var ojbBigBoxImg=objBigBox.getElementsByTagName('img')[0];
+	objMark.onmouseover=function(){
+		objFloatBox.style.display="block";
+		objBigBox.style.display="block";
+	}
+	objMark.onmouseout=function(){
+		objFloatBox.style.display="none";
+		objBigBox.style.display="none";
+	}
+	objMark.onmousemove=function(ev){
+		var _event= ev || window.event;
+		var left=_event.clientX-demo.offsetLeft-objFloatBox.offsetWidth/2;
+		var top=_event.clientY-demo.offsetTop-objFloatBox.offsetHeight/2;
+		if(left<=0){
+			left=0;
+		}else if(left>(demo.offsetWidth-objFloatBox.offsetWidth)){
+			left=demo.offsetWidth-objFloatBox.offsetWidth;
+		}
+		if(top<=0){
+			top=0;
+		}else if(top>demo.offsetHeight-objFloatBox.offsetHeight){
+			top=demo.offsetHeight-objFloatBox.offsetHeight;
+		}
+		objFloatBox.style.left=left+'px';
+		objFloatBox.style.top=top+'px';
+
+		ojbBigBoxImg.style.left = -left*objBigBox.offsetWidth/objFloatBox.offsetWidth+'px';
+		ojbBigBoxImg.style.top =-top*objBigBox.offsetHeight/objFloatBox.offsetHeight+'px';
+            }
+	}
+
+
+
+
+
+</script>
+</body>
+</html>

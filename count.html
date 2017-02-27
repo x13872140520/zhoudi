@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-type" content="text/html">
+<title>
+周帝的作品
+</title>
+<style type="text/css">
+	body{text-align:center;}
+	.text{width:200px;}
+	.button{margin-top:30px;}
+	#sum{color:red;font-size:30px;}
+</style>
+</head>
+<body>
+
+<input type="text" class="text" id="text" value="1,2,3,4,5"/><span> 请输入数字，再以,号相隔。</span>
+<p><button>求和</button></p>
+<strong id="sum"></strong>
+
+</body>
+<script type="text/javascript">
+window.onload=function(){
+var oBtn=document.getElementsByTagName("button")[0];
+var oInput=document.getElementsByTagName("input")[0];
+var oSum=document.getElementsByTagName("strong")[0];
+ oInput.onkeyup=function(){
+	this.value=this.value.replace(/[^(\d)|(,)]/,"");
+}								
+ oBtn.onclick=function(){
+	var sum=0;
+	var oInput = document.getElementById("text").value.split(",");
+	for(i=0,l=oInput.length;i<l;i++){
+	sum += parseInt(oInput[i]);
+	}
+	oSum.innerHTML=sum;
+ }
+}
+</script>
+</html>
